@@ -1,0 +1,14 @@
+{
+	"Ouroboros": "Project",
+	"Version": 1,
+	"Name": "Snake3D",
+	"StartScene": "Scenes/Snake.oscene",
+	"AssetDirectory": "Assets",
+	"Window": {
+		"Title": "Snake 3D",
+		"Width": 1280,
+		"Height": 720,
+		"Fullscreen": false,
+		"VSync": true
+	}
+}

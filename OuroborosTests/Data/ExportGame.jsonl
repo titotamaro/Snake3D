@@ -1,0 +1,2 @@
+# Exports the Snake project into <build>/ExportTest (the RunExportedGame test then runs it).
+{"id": 1, "cmd": "project.export", "args": {"output": "ExportTest"}}

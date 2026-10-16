@@ -1,0 +1,332 @@
+{
+	"Ouroboros": "Scene",
+	"Version": 1,
+	"Name": "Snake",
+	"Entities": [
+		{
+			"UUID": 1001,
+			"Components": {
+				"Tag": {
+					"Tag": "Main Camera"
+				},
+				"Transform": {
+					"Translation": [
+						0,
+						20,
+						14.5
+					],
+					"Rotation": [
+						-0.9944,
+						0,
+						0
+					],
+					"Scale": [
+						1,
+						1,
+						1
+					]
+				},
+				"Camera": {
+					"Projection": "Perspective",
+					"PerspectiveFOV": 0.7854,
+					"PerspectiveNear": 0.1,
+					"PerspectiveFar": 200.0,
+					"OrthographicSize": 10.0,
+					"OrthographicNear": -100.0,
+					"OrthographicFar": 100.0,
+					"Exposure": 1.0,
+					"Primary": true
+				}
+			}
+		},
+		{
+			"UUID": 1002,
+			"Components": {
+				"Tag": {
+					"Tag": "Sun"
+				},
+				"Transform": {
+					"Translation": [
+						0,
+						10,
+						0
+					],
+					"Rotation": [
+						-0.95,
+						0.55,
+						0
+					],
+					"Scale": [
+						1,
+						1,
+						1
+					]
+				},
+				"DirectionalLight": {
+					"Color": [
+						1.0,
+						0.95,
+						0.85
+					],
+					"Intensity": 3.5,
+					"CastShadows": true,
+					"ShadowSoftness": 1.0,
+					"ShadowDistance": 60.0
+				}
+			}
+		},
+		{
+			"UUID": 1003,
+			"Components": {
+				"Tag": {
+					"Tag": "Sky"
+				},
+				"Transform": {
+					"Translation": [
+						0,
+						0,
+						0
+					],
+					"Rotation": [
+						0,
+						0,
+						0
+					],
+					"Scale": [
+						1,
+						1,
+						1
+					]
+				},
+				"SkyLight": {
+					"Environment": "Environments/kloofendal_48d_partly_cloudy_puresky_1k.hdr",
+					"Intensity": 1.0,
+					"Rotation": 0.0,
+					"ShowBackground": true
+				}
+			}
+		},
+		{
+			"UUID": 1004,
+			"Components": {
+				"Tag": {
+					"Tag": "Board"
+				},
+				"Transform": {
+					"Translation": [
+						0,
+						0,
+						0
+					],
+					"Rotation": [
+						0,
+						0,
+						0
+					],
+					"Scale": [
+						1,
+						1,
+						1
+					]
+				},
+				"MeshRenderer": {
+					"Mesh": "Meshes/Board.gltf",
+					"Color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"Metallic": -1.0,
+					"Roughness": -1.0,
+					"Emissive": [
+						0,
+						0,
+						0
+					],
+					"EmissiveIntensity": 1.0,
+					"CastShadows": false,
+					"Visible": true
+				},
+				"BoxCollider": {
+					"HalfExtents": [
+						11.0,
+						0.5,
+						11.0
+					],
+					"Offset": [
+						0.0,
+						-0.5,
+						0.0
+					],
+					"Friction": 0.7,
+					"Restitution": 0.1,
+					"IsTrigger": false
+				}
+			}
+		},
+		{
+			"UUID": 1005,
+			"Components": {
+				"Tag": {
+					"Tag": "Game"
+				},
+				"Transform": {
+					"Translation": [
+						0,
+						0,
+						0
+					],
+					"Rotation": [
+						0,
+						0,
+						0
+					],
+					"Scale": [
+						1,
+						1,
+						1
+					]
+				},
+				"Script": {
+					"Script": "Scripts/GameManager.lua",
+					"Fields": {}
+				},
+				"AudioSource": {
+					"Clip": "Audio/Music.wav",
+					"Volume": 0.35,
+					"Pitch": 1.0,
+					"Loop": true,
+					"PlayOnStart": true,
+					"Spatial": false
+				}
+			}
+		},
+		{
+			"UUID": 1006,
+			"Components": {
+				"Tag": {
+					"Tag": "Snake Head"
+				},
+				"Transform": {
+					"Translation": [
+						0.5,
+						0.4,
+						0.5
+					],
+					"Rotation": [
+						0,
+						0,
+						0
+					],
+					"Scale": [
+						1,
+						1,
+						1
+					]
+				},
+				"MeshRenderer": {
+					"Mesh": "Meshes/SnakeHead.gltf",
+					"Color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"Metallic": -1.0,
+					"Roughness": -1.0,
+					"Emissive": [
+						0,
+						0,
+						0
+					],
+					"EmissiveIntensity": 1.0,
+					"CastShadows": true,
+					"Visible": true
+				}
+			}
+		},
+		{
+			"UUID": 1007,
+			"Components": {
+				"Tag": {
+					"Tag": "Apple"
+				},
+				"Transform": {
+					"Translation": [
+						4.5,
+						0.45,
+						0.5
+					],
+					"Rotation": [
+						0,
+						0,
+						0
+					],
+					"Scale": [
+						1,
+						1,
+						1
+					]
+				},
+				"MeshRenderer": {
+					"Mesh": "Meshes/Apple.gltf",
+					"Color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"Metallic": -1.0,
+					"Roughness": -1.0,
+					"Emissive": [
+						0,
+						0,
+						0
+					],
+					"EmissiveIntensity": 1.0,
+					"CastShadows": true,
+					"Visible": true
+				},
+				"Script": {
+					"Script": "Scripts/Apple.lua",
+					"Fields": {}
+				}
+			}
+		},
+		{
+			"UUID": 1008,
+			"Components": {
+				"Tag": {
+					"Tag": "Apple Glow"
+				},
+				"Transform": {
+					"Translation": [
+						0,
+						3,
+						0
+					],
+					"Rotation": [
+						0,
+						0,
+						0
+					],
+					"Scale": [
+						1,
+						1,
+						1
+					]
+				},
+				"PointLight": {
+					"Color": [
+						1.0,
+						0.85,
+						0.6
+					],
+					"Intensity": 6.0,
+					"Radius": 12.0
+				}
+			}
+		}
+	]
+}

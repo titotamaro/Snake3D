@@ -1,0 +1,153 @@
+{
+ "asset": {
+  "version": "2.0",
+  "generator": "Ouroboros GenerateAssets.py"
+ },
+ "scene": 0,
+ "scenes": [
+  {
+   "nodes": [
+    0
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "name": "SnakeBody",
+   "mesh": 0
+  }
+ ],
+ "meshes": [
+  {
+   "name": "SnakeBody",
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 3,
+     "material": 0,
+     "mode": 4
+    }
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "name": "SnakeSkin",
+   "pbrMetallicRoughness": {
+    "baseColorFactor": [
+     0.85,
+     1,
+     0.85,
+     1
+    ],
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.5,
+    "baseColorTexture": {
+     "index": 0
+    }
+   },
+   "normalTexture": {
+    "index": 1,
+    "scale": 1.0
+   }
+  }
+ ],
+ "buffers": [
+  {
+   "uri": "SnakeBody.bin",
+   "byteLength": 24768
+  }
+ ],
+ "bufferViews": [
+  {
+   "buffer": 0,
+   "byteOffset": 0,
+   "byteLength": 5832,
+   "target": 34962
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 5832,
+   "byteLength": 5832,
+   "target": 34962
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 11664,
+   "byteLength": 3888,
+   "target": 34962
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 15552,
+   "byteLength": 9216,
+   "target": 34963
+  }
+ ],
+ "accessors": [
+  {
+   "bufferView": 0,
+   "componentType": 5126,
+   "count": 486,
+   "type": "VEC3",
+   "min": [
+    -0.4,
+    -0.33,
+    -0.4
+   ],
+   "max": [
+    0.4,
+    0.33,
+    0.4
+   ]
+  },
+  {
+   "bufferView": 1,
+   "componentType": 5126,
+   "count": 486,
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 2,
+   "componentType": 5126,
+   "count": 486,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 3,
+   "componentType": 5125,
+   "count": 2304,
+   "type": "SCALAR"
+  }
+ ],
+ "images": [
+  {
+   "uri": "../Textures/SnakeScales_BaseColor.png"
+  },
+  {
+   "uri": "../Textures/SnakeScales_Normal.png"
+  }
+ ],
+ "samplers": [
+  {
+   "magFilter": 9729,
+   "minFilter": 9987,
+   "wrapS": 10497,
+   "wrapT": 10497
+  }
+ ],
+ "textures": [
+  {
+   "sampler": 0,
+   "source": 0
+  },
+  {
+   "sampler": 0,
+   "source": 1
+  }
+ ]
+}

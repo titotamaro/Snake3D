@@ -1,0 +1,919 @@
+{
+	"Ouroboros": "Scene",
+	"Version": 1,
+	"Name": "FeatureTest",
+	"Entities": [
+		{
+			"UUID": 2001,
+			"Components": {
+				"Tag": {
+					"Tag": "Main Camera"
+				},
+				"Transform": {
+					"Translation": [
+						0,
+						2.5,
+						9.5
+					],
+					"Rotation": [
+						-0.1669,
+						0,
+						0
+					],
+					"Scale": [
+						1,
+						1,
+						1
+					]
+				},
+				"Camera": {
+					"Projection": "Perspective",
+					"PerspectiveFOV": 0.8727,
+					"PerspectiveNear": 0.1,
+					"PerspectiveFar": 200.0,
+					"OrthographicSize": 10.0,
+					"OrthographicNear": -100.0,
+					"OrthographicFar": 100.0,
+					"Exposure": 1.0,
+					"Primary": true
+				}
+			}
+		},
+		{
+			"UUID": 2002,
+			"Components": {
+				"Tag": {
+					"Tag": "Ortho Camera"
+				},
+				"Transform": {
+					"Translation": [
+						0,
+						10,
+						0
+					],
+					"Rotation": [
+						-1.5707,
+						0,
+						0
+					],
+					"Scale": [
+						1,
+						1,
+						1
+					]
+				},
+				"Camera": {
+					"Projection": "Orthographic",
+					"PerspectiveFOV": 0.8727,
+					"PerspectiveNear": 0.1,
+					"PerspectiveFar": 200.0,
+					"OrthographicSize": 10.0,
+					"OrthographicNear": -100.0,
+					"OrthographicFar": 100.0,
+					"Exposure": 1.0,
+					"Primary": false
+				}
+			}
+		},
+		{
+			"UUID": 2003,
+			"Components": {
+				"Tag": {
+					"Tag": "Sun"
+				},
+				"Transform": {
+					"Translation": [
+						0,
+						10,
+						0
+					],
+					"Rotation": [
+						-0.8,
+						0.7,
+						0
+					],
+					"Scale": [
+						1,
+						1,
+						1
+					]
+				},
+				"DirectionalLight": {
+					"Color": [
+						1,
+						0.96,
+						0.9
+					],
+					"Intensity": 3.0,
+					"CastShadows": true,
+					"ShadowSoftness": 1.0,
+					"ShadowDistance": 60.0
+				}
+			}
+		},
+		{
+			"UUID": 2004,
+			"Components": {
+				"Tag": {
+					"Tag": "Lamp"
+				},
+				"Transform": {
+					"Translation": [
+						0,
+						2.5,
+						3
+					],
+					"Rotation": [
+						0,
+						0,
+						0
+					],
+					"Scale": [
+						1,
+						1,
+						1
+					]
+				},
+				"PointLight": {
+					"Color": [
+						1.0,
+						0.6,
+						0.3
+					],
+					"Intensity": 8.0,
+					"Radius": 10.0
+				}
+			}
+		},
+		{
+			"UUID": 2005,
+			"Components": {
+				"Tag": {
+					"Tag": "Sky"
+				},
+				"Transform": {
+					"Translation": [
+						0,
+						0,
+						0
+					],
+					"Rotation": [
+						0,
+						0,
+						0
+					],
+					"Scale": [
+						1,
+						1,
+						1
+					]
+				},
+				"SkyLight": {
+					"Environment": "Environments/kloofendal_48d_partly_cloudy_puresky_1k.hdr",
+					"Intensity": 1.0,
+					"Rotation": 0.0,
+					"ShowBackground": true
+				}
+			}
+		},
+		{
+			"UUID": 2006,
+			"Components": {
+				"Tag": {
+					"Tag": "Floor"
+				},
+				"Transform": {
+					"Translation": [
+						0,
+						0,
+						0
+					],
+					"Rotation": [
+						0,
+						0,
+						0
+					],
+					"Scale": [
+						30,
+						1,
+						30
+					]
+				},
+				"MeshRenderer": {
+					"Mesh": "Primitive:Plane",
+					"Color": [
+						0.55,
+						0.55,
+						0.55,
+						1
+					],
+					"Metallic": 0.0,
+					"Roughness": 0.8,
+					"Emissive": [
+						0,
+						0,
+						0
+					],
+					"EmissiveIntensity": 1.0,
+					"CastShadows": true,
+					"Visible": true
+				},
+				"BoxCollider": {
+					"HalfExtents": [
+						0.5,
+						0.5,
+						0.5
+					],
+					"Offset": [
+						0,
+						-0.5,
+						0
+					],
+					"Friction": 0.5,
+					"Restitution": 0.0,
+					"IsTrigger": false
+				}
+			}
+		},
+		{
+			"UUID": 2007,
+			"Components": {
+				"Tag": {
+					"Tag": "Sphere 1"
+				},
+				"Transform": {
+					"Translation": [
+						-4,
+						1,
+						0
+					],
+					"Rotation": [
+						0,
+						0,
+						0
+					],
+					"Scale": [
+						1,
+						1,
+						1
+					]
+				},
+				"MeshRenderer": {
+					"Mesh": "Primitive:Sphere",
+					"Color": [
+						0.9,
+						0.2,
+						0.15,
+						1
+					],
+					"Metallic": 0.0,
+					"Roughness": 0.1,
+					"Emissive": [
+						0,
+						0,
+						0
+					],
+					"EmissiveIntensity": 1.0,
+					"CastShadows": true,
+					"Visible": true
+				}
+			}
+		},
+		{
+			"UUID": 2008,
+			"Components": {
+				"Tag": {
+					"Tag": "Sphere 2"
+				},
+				"Transform": {
+					"Translation": [
+						-2,
+						1,
+						0
+					],
+					"Rotation": [
+						0,
+						0,
+						0
+					],
+					"Scale": [
+						1,
+						1,
+						1
+					]
+				},
+				"MeshRenderer": {
+					"Mesh": "Primitive:Sphere",
+					"Color": [
+						0.9,
+						0.2,
+						0.15,
+						1
+					],
+					"Metallic": 0.0,
+					"Roughness": 0.5,
+					"Emissive": [
+						0,
+						0,
+						0
+					],
+					"EmissiveIntensity": 1.0,
+					"CastShadows": true,
+					"Visible": true
+				}
+			}
+		},
+		{
+			"UUID": 2009,
+			"Components": {
+				"Tag": {
+					"Tag": "Sphere 3"
+				},
+				"Transform": {
+					"Translation": [
+						0,
+						1,
+						0
+					],
+					"Rotation": [
+						0,
+						0,
+						0
+					],
+					"Scale": [
+						1,
+						1,
+						1
+					]
+				},
+				"MeshRenderer": {
+					"Mesh": "Primitive:Sphere",
+					"Color": [
+						0.9,
+						0.2,
+						0.15,
+						1
+					],
+					"Metallic": 0.0,
+					"Roughness": 0.9,
+					"Emissive": [
+						0,
+						0,
+						0
+					],
+					"EmissiveIntensity": 1.0,
+					"CastShadows": true,
+					"Visible": true
+				}
+			}
+		},
+		{
+			"UUID": 2010,
+			"Components": {
+				"Tag": {
+					"Tag": "Sphere 4"
+				},
+				"Transform": {
+					"Translation": [
+						2,
+						1,
+						0
+					],
+					"Rotation": [
+						0,
+						0,
+						0
+					],
+					"Scale": [
+						1,
+						1,
+						1
+					]
+				},
+				"MeshRenderer": {
+					"Mesh": "Primitive:Sphere",
+					"Color": [
+						0.95,
+						0.75,
+						0.35,
+						1
+					],
+					"Metallic": 1.0,
+					"Roughness": 0.2,
+					"Emissive": [
+						0,
+						0,
+						0
+					],
+					"EmissiveIntensity": 1.0,
+					"CastShadows": true,
+					"Visible": true
+				}
+			}
+		},
+		{
+			"UUID": 2011,
+			"Components": {
+				"Tag": {
+					"Tag": "Sphere 5"
+				},
+				"Transform": {
+					"Translation": [
+						4,
+						1,
+						0
+					],
+					"Rotation": [
+						0,
+						0,
+						0
+					],
+					"Scale": [
+						1,
+						1,
+						1
+					]
+				},
+				"MeshRenderer": {
+					"Mesh": "Primitive:Sphere",
+					"Color": [
+						0.95,
+						0.75,
+						0.35,
+						1
+					],
+					"Metallic": 1.0,
+					"Roughness": 0.6,
+					"Emissive": [
+						0,
+						0,
+						0
+					],
+					"EmissiveIntensity": 1.0,
+					"CastShadows": true,
+					"Visible": true
+				}
+			}
+		},
+		{
+			"UUID": 2012,
+			"Components": {
+				"Tag": {
+					"Tag": "Apple Model"
+				},
+				"Transform": {
+					"Translation": [
+						-3,
+						0.35,
+						3
+					],
+					"Rotation": [
+						0,
+						0,
+						0
+					],
+					"Scale": [
+						1.5,
+						1.5,
+						1.5
+					]
+				},
+				"MeshRenderer": {
+					"Mesh": "Meshes/Apple.gltf",
+					"Color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"Metallic": -1.0,
+					"Roughness": -1.0,
+					"Emissive": [
+						0,
+						0,
+						0
+					],
+					"EmissiveIntensity": 1.0,
+					"CastShadows": true,
+					"Visible": true
+				}
+			}
+		},
+		{
+			"UUID": 2013,
+			"Components": {
+				"Tag": {
+					"Tag": "Snake Head Model"
+				},
+				"Transform": {
+					"Translation": [
+						3,
+						0.4,
+						3
+					],
+					"Rotation": [
+						0,
+						0.6,
+						0
+					],
+					"Scale": [
+						1,
+						1,
+						1
+					]
+				},
+				"MeshRenderer": {
+					"Mesh": "Meshes/SnakeHead.gltf",
+					"Color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"Metallic": -1.0,
+					"Roughness": -1.0,
+					"Emissive": [
+						0,
+						0,
+						0
+					],
+					"EmissiveIntensity": 1.0,
+					"CastShadows": true,
+					"Visible": true
+				}
+			}
+		},
+		{
+			"UUID": 2014,
+			"Components": {
+				"Tag": {
+					"Tag": "Wall Block"
+				},
+				"Transform": {
+					"Translation": [
+						5.5,
+						0.5,
+						-2
+					],
+					"Rotation": [
+						0,
+						0,
+						0
+					],
+					"Scale": [
+						1,
+						1,
+						1
+					]
+				},
+				"MeshRenderer": {
+					"Mesh": "Meshes/Wall.gltf",
+					"Color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"Metallic": -1.0,
+					"Roughness": -1.0,
+					"Emissive": [
+						0,
+						0,
+						0
+					],
+					"EmissiveIntensity": 1.0,
+					"CastShadows": true,
+					"Visible": true
+				},
+				"BoxCollider": {
+					"HalfExtents": [
+						0.5,
+						0.5,
+						0.5
+					],
+					"Offset": [
+						0,
+						0,
+						0
+					],
+					"Friction": 0.5,
+					"Restitution": 0.0,
+					"IsTrigger": false
+				}
+			}
+		},
+		{
+			"UUID": 2015,
+			"Components": {
+				"Tag": {
+					"Tag": "Falling Cube"
+				},
+				"Transform": {
+					"Translation": [
+						-6,
+						4,
+						2
+					],
+					"Rotation": [
+						0.3,
+						0.2,
+						0.1
+					],
+					"Scale": [
+						1,
+						1,
+						1
+					]
+				},
+				"MeshRenderer": {
+					"Mesh": "Primitive:Cube",
+					"Color": [
+						0.2,
+						0.5,
+						0.9,
+						1
+					],
+					"Metallic": -1.0,
+					"Roughness": -1.0,
+					"Emissive": [
+						0,
+						0,
+						0
+					],
+					"EmissiveIntensity": 1.0,
+					"CastShadows": true,
+					"Visible": true
+				},
+				"RigidBody": {
+					"Type": "Dynamic",
+					"Mass": 2.0,
+					"LinearDamping": 0.05,
+					"AngularDamping": 0.05,
+					"GravityFactor": 1.0,
+					"FixedRotation": false
+				},
+				"BoxCollider": {
+					"HalfExtents": [
+						0.5,
+						0.5,
+						0.5
+					],
+					"Offset": [
+						0,
+						0,
+						0
+					],
+					"Friction": 0.5,
+					"Restitution": 0.0,
+					"IsTrigger": false
+				},
+				"Script": {
+					"Script": "Scripts/Tests/CollisionProbe.lua",
+					"Fields": {
+						"Label": "cube"
+					}
+				}
+			}
+		},
+		{
+			"UUID": 2016,
+			"Components": {
+				"Tag": {
+					"Tag": "Falling Ball"
+				},
+				"Transform": {
+					"Translation": [
+						6,
+						5,
+						2
+					],
+					"Rotation": [
+						0,
+						0,
+						0
+					],
+					"Scale": [
+						1,
+						1,
+						1
+					]
+				},
+				"MeshRenderer": {
+					"Mesh": "Primitive:Sphere",
+					"Color": [
+						0.3,
+						0.9,
+						0.3,
+						1
+					],
+					"Metallic": -1.0,
+					"Roughness": -1.0,
+					"Emissive": [
+						0,
+						0,
+						0
+					],
+					"EmissiveIntensity": 1.0,
+					"CastShadows": true,
+					"Visible": true
+				},
+				"RigidBody": {
+					"Type": "Dynamic",
+					"Mass": 1.0,
+					"LinearDamping": 0.05,
+					"AngularDamping": 0.05,
+					"GravityFactor": 1.0,
+					"FixedRotation": false
+				},
+				"SphereCollider": {
+					"Radius": 0.5,
+					"Offset": [
+						0,
+						0,
+						0
+					],
+					"Friction": 0.5,
+					"Restitution": 0.0,
+					"IsTrigger": false
+				}
+			}
+		},
+		{
+			"UUID": 2017,
+			"Components": {
+				"Tag": {
+					"Tag": "Trigger Zone"
+				},
+				"Transform": {
+					"Translation": [
+						6,
+						1,
+						2
+					],
+					"Rotation": [
+						0,
+						0,
+						0
+					],
+					"Scale": [
+						1,
+						1,
+						1
+					]
+				},
+				"BoxCollider": {
+					"HalfExtents": [
+						1,
+						1,
+						1
+					],
+					"Offset": [
+						0,
+						0,
+						0
+					],
+					"Friction": 0.5,
+					"Restitution": 0.0,
+					"IsTrigger": true
+				},
+				"Script": {
+					"Script": "Scripts/Tests/CollisionProbe.lua",
+					"Fields": {
+						"Label": "zone"
+					}
+				}
+			}
+		},
+		{
+			"UUID": 2018,
+			"Components": {
+				"Tag": {
+					"Tag": "Kinematic Platform"
+				},
+				"Transform": {
+					"Translation": [
+						0,
+						0.1,
+						-3
+					],
+					"Rotation": [
+						0,
+						0,
+						0
+					],
+					"Scale": [
+						3,
+						0.2,
+						1
+					]
+				},
+				"MeshRenderer": {
+					"Mesh": "Primitive:Cube",
+					"Color": [
+						0.6,
+						0.6,
+						0.65,
+						1
+					],
+					"Metallic": -1.0,
+					"Roughness": -1.0,
+					"Emissive": [
+						0,
+						0,
+						0
+					],
+					"EmissiveIntensity": 1.0,
+					"CastShadows": true,
+					"Visible": true
+				},
+				"RigidBody": {
+					"Type": "Kinematic",
+					"Mass": 1.0,
+					"LinearDamping": 0.05,
+					"AngularDamping": 0.05,
+					"GravityFactor": 1.0,
+					"FixedRotation": false
+				},
+				"BoxCollider": {
+					"HalfExtents": [
+						0.5,
+						0.5,
+						0.5
+					],
+					"Offset": [
+						0,
+						0,
+						0
+					],
+					"Friction": 0.5,
+					"Restitution": 0.0,
+					"IsTrigger": false
+				}
+			}
+		},
+		{
+			"UUID": 2019,
+			"Components": {
+				"Tag": {
+					"Tag": "Speaker"
+				},
+				"Transform": {
+					"Translation": [
+						0,
+						1,
+						0
+					],
+					"Rotation": [
+						0,
+						0,
+						0
+					],
+					"Scale": [
+						1,
+						1,
+						1
+					]
+				},
+				"AudioSource": {
+					"Clip": "Audio/Eat.wav",
+					"Volume": 0.5,
+					"Pitch": 1.0,
+					"Loop": false,
+					"PlayOnStart": false,
+					"Spatial": false
+				}
+			}
+		},
+		{
+			"UUID": 2020,
+			"Components": {
+				"Tag": {
+					"Tag": "FeatureTest"
+				},
+				"Transform": {
+					"Translation": [
+						0,
+						0,
+						0
+					],
+					"Rotation": [
+						0,
+						0,
+						0
+					],
+					"Scale": [
+						1,
+						1,
+						1
+					]
+				},
+				"Script": {
+					"Script": "Scripts/Tests/FeatureTest.lua",
+					"Fields": {
+						"Label": "feature"
+					}
+				}
+			}
+		}
+	]
+}

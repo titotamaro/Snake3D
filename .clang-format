@@ -1,0 +1,23 @@
+# Ouroboros code style (modelled after the Hazel engine). See AGENTS.md for the full guide.
+Language: Cpp
+BasedOnStyle: Microsoft
+Standard: c++20
+UseTab: ForIndentation
+TabWidth: 4
+IndentWidth: 4
+ColumnLimit: 0
+BreakBeforeBraces: Allman
+NamespaceIndentation: All
+AccessModifierOffset: -4
+PointerAlignment: Left
+ReferenceAlignment: Left
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+AllowShortBlocksOnASingleLine: Never
+AllowShortEnumsOnASingleLine: false
+AlwaysBreakTemplateDeclarations: Yes
+SortIncludes: Never
+IndentCaseLabels: true
+FixNamespaceComments: false
+SpaceAfterTemplateKeyword: true

@@ -1,0 +1,24 @@
+# Drives the headless editor through the agent command API (one JSON request per line).
+{"id": 1, "cmd": "ping"}
+{"id": 2, "cmd": "editor.state"}
+{"id": 3, "cmd": "entity.list"}
+{"id": 4, "cmd": "entity.create", "args": {"name": "Agent Cube", "components": {"MeshRenderer": {"Mesh": "Primitive:Cube"}, "Transform": {"Translation": [0, 3, 0]}}}}
+{"id": 5, "cmd": "component.set", "args": {"entity": "Agent Cube", "type": "MeshRenderer", "data": {"Color": [1, 0.2, 0.2, 1]}}}
+{"id": 6, "cmd": "component.get", "args": {"entity": "Agent Cube", "type": "MeshRenderer"}}
+{"id": 7, "cmd": "editor.select", "args": {"entity": "Agent Cube"}}
+{"id": 8, "cmd": "editor.camera.set", "args": {"position": [12, 14, 16], "target": [0, 0, 0]}}
+{"id": 9, "cmd": "editor.wait", "args": {"frames": 3}}
+{"id": 10, "cmd": "editor.screenshot", "args": {"path": "build/AutomationEdit.png"}}
+{"id": 11, "cmd": "entity.destroy", "args": {"entity": "Agent Cube"}}
+{"id": 12, "cmd": "editor.play"}
+{"id": 13, "cmd": "editor.wait", "args": {"frames": 10}}
+{"id": 14, "cmd": "input.tap", "args": {"key": "Up"}}
+{"id": 15, "cmd": "editor.wait", "args": {"frames": 30}}
+{"id": 16, "cmd": "script.exec", "args": {"code": "return Scene.FindEntityByName('Game'):GetScript().Mode"}}
+{"id": 17, "cmd": "game.ui"}
+{"id": 18, "cmd": "editor.screenshot", "args": {"path": "build/AutomationPlay.png"}}
+{"id": 19, "cmd": "script.errors"}
+{"id": 20, "cmd": "editor.stop"}
+{"id": 21, "cmd": "scene.info"}
+{"id": 22, "cmd": "renderer.stats"}
+{"id": 23, "cmd": "log.get", "args": {"level": "error"}}

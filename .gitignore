@@ -1,0 +1,13 @@
+/build/
+/out/
+/Exports/
+.vs/
+.vscode/
+.idea/
+*.user
+imgui.ini
+__pycache__/
+*.pyc
+/SnakeGame/Screenshots/
+/Testing/
+/SnakeGame/.ouroboros/
